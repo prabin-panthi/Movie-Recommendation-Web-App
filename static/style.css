@@ -1,0 +1,353 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.searchdiv {
+    display: flex;
+    justify-content: center;
+    margin: 28px 0px 10px 0px;
+}
+
+.homebtn {
+    height: 45px;
+    width: 45px;
+    margin-right: 3%;
+    border-radius: 50%;
+    background-color: #43a5d9;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.searchboxdiv {
+    position: relative;
+    display: flex;
+    width: 55%;
+}
+
+#searchbox {
+    border: 2px solid #007bff;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 13px 0px 0px 13px;
+}
+
+#searchbox:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+#clearbtn {
+    cursor: pointer;
+    height: 39px;
+    font-size: 25px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 7%;
+    background: #f6f6f6;
+    border: none;
+    align-self: center;
+    display: none;
+}
+
+#searchicon {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    align-items: center;
+    height: 43px;
+}
+
+#searchicon:hover {
+    background-color: #0056b3;
+}
+
+.openbutton {
+    background: linear-gradient(135deg, #0062ff 0%, #003da6 100%);
+    color: white;
+    width: fit-content;
+    padding: 10px 25px;
+    margin-top: auto;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.movietilediv {
+    display: flex;
+    position: relative;
+    padding: 5px;
+    margin: 5px;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.movietilediv p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 50;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+
+.enlargebtn {
+    font-size: larger;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    border-radius: 50%;
+    background-color: #43a5d9;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.movietilediv:hover img {
+    opacity: 0.6;
+}
+
+.movietilediv:hover .enlargebtn {
+    opacity: 1;
+}
+
+.infodiv p {
+    margin: 15px 15px 15px 75px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.tilesdiv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.movietilediv img {
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.smallsearchdiv {
+    display: flex;
+    height: 32px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 55px;
+    padding-left: 25px;
+    margin: 15px 0px;
+}
+
+.smallsearchboxdiv {
+    position: relative;
+    display: flex;
+    width: 10%;
+    margin-left: auto;
+}
+
+#smallsearchbox {
+    height: 45%;
+    width: 100%;
+    padding: 2px;
+}
+
+#smallclearbtn {
+    cursor: pointer;
+    height: 16px;
+    position: absolute;
+    right: 2px;
+    width: 12px;
+    background: #f6f6f6;
+    border: none;
+    align-self: center;
+    display: none;
+}
+
+#smallsearchicon {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: .95rem;
+    border-radius: 0 8px 8px 0;
+    padding: 4.42px 4px;
+    display: flex;
+    align-items: center;
+}
+
+.moviecontentdiv {
+    display: grid;
+    grid-template-columns: 28fr 72fr;
+}
+
+.imgdiv {
+    margin: 0px 25px 0px 40px;
+}
+
+.imgdiv img {
+    width: 95%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.textdiv {
+    padding: 15px 75px 5px 25px;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.textdiv p {
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #64748b;
+}
+
+.textdiv p:nth-child(1),
+.textdiv p:nth-child(6) {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+
+.textdiv p:last-child {
+    font-size: 16px;
+    color: #334155;
+    margin-top: 8px;
+}
+
+.linediv {
+    margin: 15px 0px;
+    height: 2px;
+    border: none;
+    background: linear-gradient(to right, #595959, #a2a2a2);
+}
+
+.errdiv {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #8e8e8e;
+    padding: 20px 24px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px 55px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.errdiv p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #222;
+    letter-spacing: -0.01em;
+}
+
+.errdiv ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.errdiv li {
+    margin-bottom: 6px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 520px) {
+    .homebtn {
+        height: 40px;
+        width: 40px;
+        margin-right: 9%;
+    }
+
+    .searchboxdiv {
+        margin-left: 22px;
+        position: relative;
+        display: flex;
+        width: 53%;
+    }
+
+    #searchbox {
+        height: 24px;
+        font-size: 15px;
+    }
+
+    #clearbtn {
+        height: 33px;
+        top: 2px;
+        width: 25px;
+        font-size: 20px;
+    }
+
+    #searchicon {
+        height: 37.5px;
+    }
+
+    .tilesdiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .moviecontentdiv {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .textdiv {
+        padding: 15px 25px 5px 25px;
+        font-family: 'Inter', sans-serif;
+        color: #1e293b;
+        line-height: 1.6;
+    }
+
+
+    .movietilediv:hover img {
+        opacity: 1;
+    }
+
+    .movietilediv:hover .enlargebtn {
+        opacity: 0;
+    }
+
+    .smallsearchboxdiv {
+        position: relative;
+        display: flex;
+        width: 25%;
+        margin-left: auto;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+}

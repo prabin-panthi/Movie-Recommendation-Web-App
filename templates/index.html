@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabin Movie Recommender</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="homediv">
+        <div class="searchdiv">
+            <button class="homebtn"><i class="fa-solid fa-house"></i></button>
+            <div class="searchboxdiv">
+                <input type="text" id="searchbox" placeholder="Search to find recommended english movies">
+                <button id="clearbtn" class="hidden"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <button id="searchicon"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="infodiv">
+            <p>Some Popular Movies: </p>
+        </div>
+        <div class="tilesdiv">
+            <div class="movietilediv" id="movietilediv[1]">
+                <img src="https://image.tmdb.org/t/p/w1280/5JzVWJvjOe9Y9YOrg8iOsLJDNne.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Avengers: Age of Ultron</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[2]">
+                <img src="https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Avatar</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[3]">
+                <img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Guardians of the Galaxy</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[4]">
+                <img src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Titanic</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[5]">
+                <img src="https://image.tmdb.org/t/p/w500/b1xCNnyrPebIc7EWNZIa6jhb1Ww.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Jurassic Park</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[6]">
+                <img src="https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Inception</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[7]">
+                <img src="https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Lion King</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[8]">
+                <img src="https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Forrest Gump</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[9]">
+                <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Godfather</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[10]">
+                <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Dark Knight</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[11]">
+                <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Star Wars</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[12]">
+                <img src="https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Lord of the Rings: The Return of the King</p>
+                <button class="openbutton">Open</button>
+            </div>
+        </div>
+        <div class="errdiv hidden">
+            <p>Movie not found in database. Please verify following probable causes:</p>
+            <ul>
+                <li>Search is case-insensitive and ignores punctuation.</li>
+                <li>Double-check spelling or spacing.</li>
+                <li>Database includes only 4,800 English titles(1916-2016).</li>
+            </ul>
+        </div>
+    </div>
+    <div class="moviediv hidden">
+        <div class="smallsearchdiv">
+            <button class="homebtn"><i class="fa-solid fa-house"></i></button>
+            <div class="smallsearchboxdiv">
+                <input type="text" id="smallsearchbox" placeholder="Search">
+                <button id="smallclearbtn" class="hidden"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <button id="smallsearchicon"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="moviecontentdiv">
+            <div class="imgdiv">
+                <img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
+            </div>
+            <div class="textdiv">
+                <p>Avengers: Infinity War</p>
+                <p>Release: 2018-04-25</p>
+                <p>Genres: Adventure, Science Fiction, Action</p>
+                <p>Rating: 8.3</p>
+                <div class="linediv"></div>
+                <p>Overview</p>
+                <p>As the Avengers and their allies have continued to protect the world from threats too large for any
+                    one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of
+                    intergalactic infamy, his goal is to collect all six Infinity Stones — powerful artifacts that grant
+                    control over existence itself. Everything the Avengers have fought for has led up to this moment as
+                    the fate of Earth and the universe hangs in the balance. To stop Thanos from inflicting his twisted
+                    will on all of reality, the Avengers — joined by the Guardians of the Galaxy — must join forces to
+                    confront him in an epic battle that will determine the future of all life.</p>
+            </div>
+        </div>
+        <div class="infodiv">
+            <p>Recommended Movies: </p>
+        </div>
+        <div class="tilesdiv">
+            <div class="movietilediv" id="movietilediv[13]">
+                <img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Avengers: Infinity War</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[14]">
+                <img src="https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Avatar</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[15]">
+                <img src="https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Avengers: Endgame</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[16]">
+                <img src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Titanic</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[17]">
+                <img src="https://image.tmdb.org/t/p/w500/b1xCNnyrPebIc7EWNZIa6jhb1Ww.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Jurassic Park</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[18]">
+                <img src="https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Inception</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[19]">
+                <img src="https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Lion King</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[20]">
+                <img src="https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Forrest Gump</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[21]">
+                <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Godfather</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[22]">
+                <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Dark Knight</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[23]">
+                <img src="https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>Star Wars: Episode IV - A New Hope</p>
+                <button class="openbutton">Open</button>
+            </div>
+            <div class="movietilediv" id="movietilediv[24]">
+                <img src="https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg">
+                <button class="enlargebtn"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                <p>The Lord of the Rings: The Return of the King</p>
+                <button class="openbutton">Open</button>
+            </div>
+        </div>
+        <div class="errdiv hidden">
+            <p>Movie not found in database. Please verify following probable causes:</p>
+            <ul>
+                <li>Search is case-insensitive and ignores punctuation.</li>
+                <li>Double-check spelling or spacing.</li>
+                <li>Database includes only 4,800 English titles(1916-2016).</li>
+            </ul>
+        </div>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+
+</html>
