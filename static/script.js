@@ -100,7 +100,7 @@ async function prediction() {
   let formdata = new FormData();
   formdata.append("text", text);
 
-  let response = await fetch('http://192.168.1.65:5000/predict', {
+  let response = await fetch('https://prabin-movie-recommendation.onrender.com/predict', {
     method: "POST", body: formdata
   });
 
@@ -119,7 +119,7 @@ async function small_prediction() {
   let formdata = new FormData();
   formdata.append("text", text);
 
-  let response = await fetch('http://192.168.1.65:5000/predict', {
+  let response = await fetch('https://prabin-movie-recommendation.onrender.com/predict', {
     method: "POST", body: formdata
   });
 
@@ -208,7 +208,7 @@ async function openBtn_prediction(text) {
   let formdata = new FormData();
   formdata.append("text", text);
 
-  let response = await fetch('http://192.168.1.65:5000/predict', {
+  let response = await fetch('https://prabin-movie-recommendation.onrender.com/predict', {
     method: "POST", body: formdata
   });
 
